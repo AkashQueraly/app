@@ -36,7 +36,6 @@ function Booklist() {
 }
 
 const Book = (img,title,author) => {
-  console.log(props);
   // const { img, title, author } = props;
   return (
     <article className="book">
