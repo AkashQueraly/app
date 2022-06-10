@@ -4,50 +4,44 @@ import ReactDOM from "react-dom";
 // CSS
 import "./index.css";
 // setup vars{
-  const books = [
-{  img: 
-  "https://images-na.ssl-images-amazon.com/images/I/8144Vic9C5L._AC_UL200_SR200,200_.jpg",
-  title: "I Love You to the Moon and Back",
-  author: "Amelia Hepworth",
-},
-{
-  img: 
-  "https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL200_SR200,200_.jpg",
-  title:
-    "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
-  author: "James Clear",
-},
-{
-
-    img: 
-    "https://images-na.ssl-images-amazon.com/images/I/81nzxODnaJL._AC_UL200_SR200,200_.jpg",
+const books = [
+  {
+    id: 1,
+    img: "https://images-na.ssl-images-amazon.com/images/I/8144Vic9C5L._AC_UL200_SR200,200_.jpg",
+    title: "I Love You to the Moon and Back",
+    author: "Amelia Hepworth",
+  },
+  {
+    id: 2,
+    img: "https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL200_SR200,200_.jpg",
     title:
-      "If Animals Kissed Good Night",
+      "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
+    author: "James Clear",
+  },
+  {
+    id: 3,
+    img: "https://images-na.ssl-images-amazon.com/images/I/81nzxODnaJL._AC_UL200_SR200,200_.jpg",
+    title: "If Animals Kissed Good Night",
     author: "Ann Whitford Paul",
   },
-
-
-  ];
+];
 function Booklist() {
   return (
     <section className="booklist">
-      {books.map((book)=>{
-        const {img,title,author}=book;
-        return (
-          <Book book={book}></Book>
-        )
+      {books.map((book, index) => {
+        return <Book key={book.id} {...book}></Book>;
       })}
     </section>
   );
 }
 
-const Book = (props) => {
+const Book = (img,title,author) => {
   console.log(props);
-  const {img,title, author,} = props.book;
+  // const { img, title, author } = props;
   return (
     <article className="book">
       <img src={img} alt="" />
-       <h1>{title}</h1>
+      <h1>{title}</h1>
       <h4>{author}</h4>
     </article>
   );
