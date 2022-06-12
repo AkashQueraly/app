@@ -9,7 +9,7 @@ export const books = [
       id: 2,
       img: "https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL200_SR200,200_.jpg",
       title:
-        "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
+        "Atomic Habits",
       author: "James Clear",
     },
     {
